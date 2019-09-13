@@ -1,8 +1,8 @@
-for num in range(1,100):
-    num_div = 0
-    for div in range(1, num + 1):
-        if num % div == 0:
-            num_div += 1
-    if num_div == 10:
-        print(num)
-print("Hello")
+string = "Hello World!"
+
+for c in range(5):
+    print(c)
+
+a_list = {"1": "one", "2": "two", "stuff": ["hello", "hola"]}
+
+print(a_list[0])

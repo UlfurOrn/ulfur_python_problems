@@ -11,14 +11,22 @@ Create grid
 """
 
 pos_x = 0; pos_y = 0
-
 maze = [[0 for i in range(5)] for i in range(5)]
-
-if 1 in maze:
-    print(True)
 maze[pos_y][pos_x] = 1
-if 1 in maze:
-    print(True)
-
+maze[-1][0] = 1
 for i in range(5):
     print(maze[i])
+
+def possible_direction():
+    count_dir = 0
+    if pos_y != 4 and maze[pos_y + 1][pos_x] == 0:
+            count_dir += 1
+    if pos_y != 0 and maze[pos_y - 1][pos_x] == 0:
+            count_dir += 1
+    if pos_x != 4 and maze[pos_y][pos_x + 1] == 0:
+            count_dir += 1
+    if pos_x != 0 and maze[pos_y][pos_x - 1] == 0:
+            count_dir += 1
+    print(count_dir)
+
+possible_direction()
